@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>◆ Екатерина Старкова — Financial Analytics</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+:root{--bg:#080b0d;--paper:#101416;--ink:#eef1ed;--muted:#8e9691;--line:#293033;--soft:#171c1f;--green:#78b59b;--green2:#a1d0ba;--gold:#c6a66a;--white:#f5f6f2;--max:1180px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}.wrap{max-width:var(--max);margin:auto;padding:0 34px}
+nav{height:78px;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:20;background:rgba(243,241,235,.94);backdrop-filter:blur(16px)}.brand{font:700 12px Manrope,sans-serif;letter-spacing:.14em;display:flex;align-items:center;gap:11px}.brand:before{content:"◆";font-size:7px;color:var(--gold)}.nav{display:flex;gap:30px;font-size:12px;color:#565b56}.nav a{position:relative}.nav a:after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:1px;background:var(--green);transition:.25s}.nav a:hover:after{right:0}
+.hero{min-height:650px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(300px,.9fr);align-items:center;gap:64px;padding:95px 0 105px;position:relative}.hero:before{content:"01 / 04";position:absolute;right:2px;top:72px;font:10px "DM Mono",monospace;letter-spacing:.16em;color:#9a9d96}.hero:after{content:"";position:absolute;right:-130px;bottom:55px;width:440px;height:440px;border:1px solid #d2d0c8;border-radius:50%;box-shadow:0 0 0 55px rgba(23,63,50,.025),0 0 0 110px rgba(23,63,50,.018);pointer-events:none}.kicker{font:10px "DM Mono",monospace;letter-spacing:.18em;text-transform:uppercase;color:var(--green)}.hero h1{font:600 clamp(56px,7.2vw,94px)/.93 Manrope,sans-serif;letter-spacing:-.065em;margin:23px 0 30px;max-width:720px}.hero h1 span{color:var(--green)}.hero p{max-width:610px;color:#929a95;font-size:17px;line-height:1.75;margin:0}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:38px}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 20px;border:1px solid #bbbcb5;font:600 11px Manrope,sans-serif;letter-spacing:.04em;transition:.25s;background:transparent}.btn:hover{border-color:var(--green);transform:translateY(-1px)}.btn.fill{background:var(--green);color:#f8f7f1;border-color:var(--green)}.btn.fill:hover{background:#102f26}
+.hero-side{position:relative;z-index:1;border-left:1px solid var(--line);padding-left:44px}.hero-side:before{content:"Σ";font:500 76px Georgia,serif;color:#d8d5cc;position:absolute;right:20px;top:-45px}.hero-side .eyebrow{font:10px "DM Mono";letter-spacing:.16em;color:var(--muted);text-transform:uppercase}.hero-side h3{font:500 25px/1.35 Manrope;margin:13px 0 25px;max-width:330px}.hero-side .line{height:1px;background:var(--line);margin:24px 0}.hero-side dl{display:grid;grid-template-columns:105px 1fr;gap:12px 18px;margin:0;font-size:12px}.hero-side dt{color:#969a94;text-transform:uppercase;font:9px "DM Mono";letter-spacing:.12em}.hero-side dd{margin:0;color:#c0c6c1}
+section{padding:92px 0;border-top:1px solid var(--line)}.head{display:grid;grid-template-columns:.72fr 1fr;gap:70px;margin-bottom:42px}.head h2{margin:0;font:600 clamp(34px,4vw,55px)/1 Manrope,sans-serif;letter-spacing:-.055em}.head h2:before{content:"— ";color:var(--gold);font-weight:400}.head p{margin:4px 0 0;max-width:610px;color:#929a95;font-size:14px;line-height:1.8}
+.numbers{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}.numcard{padding:31px 30px 35px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:rgba(250,249,245,.52)}.numcard .kicker{color:var(--gold)}.numcard h3{font:600 18px Manrope;margin:20px 0 10px;letter-spacing:-.02em}.numcard p{margin:0;color:#6c716c;font-size:13px;line-height:1.7}
+.recruiter-strip{display:grid;grid-template-columns:1.1fr 1.2fr 1fr;border:1px solid var(--line);background:var(--paper);margin-bottom:70px}.recruiter-strip>div{padding:24px 26px;border-right:1px solid var(--line)}.recruiter-strip>div:last-child{border-right:0}.recruiter-strip strong{display:block;margin-top:9px;font:600 13px/1.5 Manrope}.recruiter-strip .kicker{font-size:8px;color:var(--gold)}
+.cases{display:grid;gap:24px}.case{display:grid;grid-template-columns:72px 1fr 390px;gap:30px;border:1px solid var(--line);background:var(--paper);padding:30px;position:relative;overflow:hidden}.case:after{content:"";position:absolute;right:-100px;top:-100px;width:220px;height:220px;border:1px solid #e0ddd4;border-radius:50%}.case-num{font:10px "DM Mono";letter-spacing:.12em;color:var(--gold);padding-top:5px}.case h3{font:600 23px Manrope;letter-spacing:-.035em;margin:0 0 8px}.case .role{font:11px "DM Mono";text-transform:uppercase;color:var(--green);letter-spacing:.1em}.case p{font-size:13px;color:#929a95;line-height:1.75;max-width:560px}.case ul{margin:18px 0 0;padding-left:18px;color:#929a95;font-size:12px;line-height:1.9}.dash{border:1px solid #d7d5cd;background:#0d1214;min-height:245px;position:relative;padding:18px;z-index:1}.dash-top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #dad8d0;padding-bottom:12px}.dash-label{font:8px "DM Mono";letter-spacing:.12em;color:#7e837d}.dash .kpis{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:15px 0}.kpi{background:#111719;border:1px solid #dedcd4;padding:11px}.kpi strong{display:block;font:600 22px Manrope;color:var(--green);letter-spacing:-.04em}.kpi span{font-size:9px;color:#8a8e88}.chart{height:82px;display:flex;align-items:flex-end;gap:7px;padding:10px 5px 0;border-top:1px solid #dedcd4}.barset{display:flex;align-items:flex-end;gap:7px;width:100%;height:65px}.bar{display:block;flex:1;background:#a8b8ae;min-height:8px}.bar.accent{background:var(--green)}.chart-caption{display:flex;justify-content:space-between;gap:5px;font:8px "DM Mono";color:#777c76;margin-top:7px}.dash-note{margin-top:10px;font:8px "DM Mono";letter-spacing:.08em;color:#7a7f79;text-transform:uppercase}
+.timeline{border-left:1px solid #bfc0ba;margin-left:15px}.job{position:relative;padding:0 0 46px 42px}.job:last-child{padding-bottom:0}.job:before{content:"";position:absolute;left:-5px;top:6px;width:9px;height:9px;border:1px solid var(--green);background:var(--bg);border-radius:50%}.date{font:9px "DM Mono";letter-spacing:.12em;color:var(--gold);margin-bottom:7px}.job h3{font:600 18px Manrope;margin:0 0 3px;letter-spacing:-.02em}.role{font-size:12px;color:var(--green);margin-bottom:13px}.job ul{margin:0;padding-left:17px;color:#929a95;font-size:12px;line-height:1.85}.job li{padding-left:3px}
+.skills{display:flex;flex-wrap:wrap;gap:8px}.skill{border:1px solid #c9c8c0;background:var(--paper);padding:9px 13px;font:10px "DM Mono";color:#aab1ac}.contact{padding:100px 0 70px}.contact-box{background:var(--green);color:#f7f5ee;padding:56px 60px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:end;position:relative;overflow:hidden}.contact-box:after{content:"↗";position:absolute;right:35px;top:18px;font:80px Manrope;color:rgba(255,255,255,.07)}.contact-box h2{font:600 clamp(34px,4vw,58px)/1 Manrope;letter-spacing:-.055em;margin:0 0 15px}.contact-box p{color:#cbd9d1;max-width:600px;margin:0;font-size:13px}.contact-box .btn{border-color:#8eb2a1;color:#f7f5ee;position:relative;z-index:2}.contact-box .btn:hover{border-color:#fff}footer{border-top:1px solid var(--line);padding:22px 0 35px;color:#858a83;font:9px "DM Mono";letter-spacing:.08em;display:flex;justify-content:space-between}
+@media(max-width:900px){.hero{grid-template-columns:1fr;gap:50px}.hero-side{border-left:0;border-top:1px solid var(--line);padding:30px 0 0}.head{grid-template-columns:1fr;gap:18px}.case{grid-template-columns:42px 1fr}.case .dash{grid-column:2}.numbers,.recruiter-strip{grid-template-columns:1fr}.recruiter-strip>div{border-right:0;border-bottom:1px solid var(--line)}.recruiter-strip>div:last-child{border-bottom:0}.contact-box{grid-template-columns:1fr}}
+@media(max-width:620px){.wrap{padding:0 20px}nav{padding:0 20px;height:68px}.nav{display:none}.hero{min-height:auto;padding:75px 0 85px}.hero h1{font-size:55px}.hero p{font-size:15px}section{padding:70px 0}.case{grid-template-columns:1fr;padding:23px}.case-num{margin-bottom:-15px}.case .dash{grid-column:auto}.contact-box{padding:38px 27px}footer{display:block}footer span{display:block;margin-bottom:8px}}
+
+/* CASE STUDIES — responsive accordion */
+.case-head{
+  display:grid;
+  grid-template-columns:110px minmax(0,1fr) 44px;
+  align-items:center;
+  gap:24px;
+  min-height:72px;
+  position:relative;
+  z-index:2;
+}
+.case-no{
+  font:9px "DM Mono",monospace;
+  letter-spacing:.12em;
+  color:var(--gold);
+  text-transform:uppercase;
+}
+.case-head h3{margin:0}
+.case-head .lead{
+  margin-top:5px;
+  color:#7a7e78;
+  font-size:11px;
+  line-height:1.5;
+}
+.toggle{
+  width:38px;height:38px;
+  border:1px solid #bfc0b8;
+  background:transparent;
+  color:var(--green);
+  font:400 20px/1 Inter,sans-serif;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:.22s;
+  position:relative;z-index:3;
+}
+.toggle:hover{background:var(--green);color:#fff;border-color:var(--green)}
+.case-body{
+  display:grid;
+  grid-template-rows:0fr;
+  transition:grid-template-rows .42s ease, opacity .3s ease, margin-top .42s ease;
+  opacity:0;
+  margin-top:0;
+  position:relative;
+  z-index:1;
+}
+.case-body > .case-grid{min-height:0;overflow:hidden}
+.case.open .case-body{
+  grid-template-rows:1fr;
+  opacity:1;
+  margin-top:30px;
+}
+.case.open .toggle{background:var(--green);color:#fff;border-color:var(--green)}
+.case-grid{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(330px,390px);
+  gap:38px;
+  align-items:start;
+  padding-top:28px;
+  border-top:1px solid var(--line);
+}
+.copy h4{
+  margin:0 0 7px;
+  font:600 11px "DM Mono",monospace;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  color:var(--green);
+}
+.copy h4:not(:first-child){margin-top:24px}
+.copy p{margin:0;color:#646a64;font-size:13px;line-height:1.75;max-width:620px}
+.copy ul{margin:0;padding-left:18px;color:#929a95;font-size:12px;line-height:1.85}
+.copy b{color:var(--green)}
+.dashboard{min-width:0}
+.dash-title{
+  font:9px "DM Mono",monospace;
+  letter-spacing:.1em;
+  color:#4d534e;
+}
+.flow{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:6px;
+  margin-top:12px;
+}
+.flow div{
+  border:1px solid #d8d6ce;
+  background:#101517;
+  padding:6px 4px;
+  text-align:center;
+  font:7px "DM Mono",monospace;
+  letter-spacing:.06em;
+  color:#777c76;
+}
+.case{
+  transition:border-color .25s ease, box-shadow .25s ease;
+}
+.case:hover{border-color:#c8c6bd}
+.case.open{box-shadow:0 14px 40px rgba(24,30,26,.045)}
+@media(max-width:900px){
+  .case-head{grid-template-columns:72px minmax(0,1fr) 42px;gap:16px}
+  .case-grid{grid-template-columns:1fr}
+  .dashboard{max-width:520px}
+}
+@media(max-width:620px){
+  .case{padding:20px}
+  .case-head{grid-template-columns:1fr 42px;gap:12px;align-items:start}
+  .case-no{grid-column:1/-1}
+  .case-head h3{font-size:20px}
+  .case-body{transition:grid-template-rows .35s ease,opacity .25s ease,margin-top .35s ease}
+  .case.open .case-body{margin-top:24px}
+  .case-grid{padding-top:22px;gap:24px}
+  .dashboard{width:100%}
+}
+
+
+/* DARK PREMIUM FINANCE THEME */
+body{background:var(--bg);color:var(--ink)}
+nav{background:rgba(8,11,13,.93);border-color:var(--line)}
+.nav{color:#9aa19c}
+.hero:after{border-color:#222a2d;box-shadow:0 0 0 55px rgba(120,181,155,.025),0 0 0 110px rgba(120,181,155,.015)}
+.hero-side{border-color:var(--line)}
+.hero-side:before{color:#252d30}
+.hero-side .line{background:var(--line)}
+.hero-side dd{color:#c0c6c1}
+.hero p,.head p,.numcard p,.case p,.copy p,.copy ul,.job ul{color:#929a95}
+.btn{border-color:#3c4547;color:var(--ink)}
+.btn.fill{background:#dfe9e2;color:#0b110e;border-color:#dfe9e2}
+.btn.fill:hover{background:#c9ddd1}
+section{border-color:var(--line)}
+.numbers{border-color:var(--line)}
+.numcard{border-color:var(--line);background:rgba(16,20,22,.72)}
+.recruiter-strip{border-color:var(--line);background:var(--paper)}
+.recruiter-strip>div{border-color:var(--line)}
+.case{border-color:#30383b;background:var(--paper)}
+.case:hover{border-color:#465256}
+.case-grid{border-color:var(--line)}
+.case-head .lead{color:#8c948f}
+.case.open{box-shadow:0 14px 40px rgba(0,0,0,.22)}
+.toggle{border-color:#485154;color:var(--green)}
+.toggle:hover,.case.open .toggle{background:var(--green);color:#08100c;border-color:var(--green)}
+.copy h4{color:var(--green)}
+.dash{border-color:#30383a;background:#0d1214}
+.dash-top{border-color:#2b3335}
+.dash-label,.dash-note{color:#89918c}
+.kpi{background:#111719;border-color:#2e3739}
+.kpi span{color:#8a928d}
+.kpi strong{color:#8bc2a9}
+.chart{border-color:#2e3739}
+.bar{background:#486457}.bar.accent{background:#78b59b}
+.chart-caption{color:#818a84}
+.flow div{background:#101517;border-color:#30383a;color:#858d88}
+.timeline{border-color:#384143}
+.job:before{border-color:var(--green);background:var(--bg)}
+.role{color:var(--green)}
+.skill{border-color:#343d40;background:var(--paper);color:#aab1ac}
+.contact-box{background:#12372c;color:#f3f5f1}
+.contact-box p{color:#c2d5cb}
+.contact-box .btn{border-color:#82ad9b;color:#f5f6f2}
+footer{border-color:var(--line);color:#727b76}
+
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav><a class="brand" href="#">ЕКАТЕРИНА СТАРКОВА</a><div class="nav"><a href="#cases">Кейсы</a><a href="#experience">Опыт</a><a href="#skills">Компетенции</a><a href="#contact">Контакты</a></div></nav>
+<header class="hero"><div class="kicker">Финансовый аналитик · Экономист-финансист</div><h1>Данные.<br>Анализ.<br><span style="color:var(--green)">Решения.</span></h1><p>Финансовый и экономический анализ, управленческая отчётность и работа с данными. План-факт · отклонения · рентабельность · расходы · Excel / Power Query · Power BI.</p><div class="hero-actions"><a class="btn fill" href="#cases">Кейсы</a><a class="btn" href="#experience">Опыт</a><a class="btn" href="mailto:katiy.starkova@yandex.ru">Связаться</a></div><div class="hero-side"><div class="eyebrow">PROFILE / 2026</div><h3>Финансовый анализ, отчётность и работа с данными — от расчёта до управленческого вывода.</h3><div class="line"></div><dl><dt>Фокус</dt><dd>Финансовый аналитик · Экономист-финансист</dd><dt>Инструменты</dt><dd>Excel · Power Query · Power BI · SQL</dd><dt>Образование</dt><dd>Магистр финансовой аналитики</dd><dt>Язык</dt><dd>Русский · English C1</dd></dl></div></header>
+
+<section><div class="head"><h2>Что я<br>даю бизнесу</h2><p>Собираю и проверяю данные, нахожу отклонения, рассчитываю показатели и превращаю цифры в понятные выводы для руководства. Цифры ниже — фактические результаты из профессионального опыта.</p></div><div class="numbers">
+<div class="numcard"><div class="big">2×</div><h3>Ускорение отчётности</h3><p>Автоматизация типовых отчётов в Excel.</p></div>
+<div class="numcard"><div class="big">30%</div><h3>Меньше ошибок</h3><p>После консолидации и проверки данных.</p></div>
+<div class="numcard"><div class="big">8–10%</div><h3>Снижение расходов</h3><p>Результат анализа закупок и цен.</p></div></div></section>
+
+<section><div class="head"><h2>Фокус<br>роли</h2><p>Портфолио ориентировано на вакансии, где важны финансовая и экономическая аналитика, работа с отчётностью и данными.</p></div><div class="numbers">
+<div class="numcard"><div class="kicker">01</div><h3>Финансовый анализ</h3><p>План-факт, факторный анализ, рентабельность, себестоимость, денежные потоки и задолженность.</p></div>
+<div class="numcard"><div class="kicker">02</div><h3>Экономика и планирование</h3><p>Анализ доходов и расходов, закупок, договорной работы и финансово-экономических обоснований.</p></div>
+<div class="numcard"><div class="kicker">03</div><h3>Данные и отчётность</h3><p>Excel, Power Query, Power BI и базовый SQL для подготовки, проверки и визуализации данных.</p></div></div></section>
+
+<section class="recruiter-strip"><div><span class="kicker">TARGET ROLES</span><strong>Финансовый аналитик · Экономист-финансист</strong></div><div><span class="kicker">CORE</span><strong>Отчётность · План-факт · Excel · Power Query · Power BI</strong></div><div><span class="kicker">RESULTS</span><strong>2× скорость · −30% ошибок · −8–10% затрат</strong></div></section>
+
+<section id="cases"><div class="kicker" style="margin-bottom:18px;color:var(--gold)">02 / SELECTED CASES</div><div class="head"><h2>Case<br>studies</h2><p>Кейсы показывают рабочую логику: исходные данные → проверка → расчёт → аналитический вывод → решение.</p></div>
+<div class="cases">
+<article class="case"><div class="case-head"><div class="case-no">01 / REPORTING</div><div><h3>Автоматизация управленческой отчётности</h3><div class="lead">Excel → Power Query → управленческий вывод</div></div><button class="toggle">−</button></div><div class="case-body"><div class="case-grid"><div class="copy"><h4>Задача</h4><p>Ускорить подготовку регулярной управленческой отчётности и высвободить время для аналитики.</p><h4>Решение</h4><ul><li>сводные таблицы и формулы;</li><li>Power Query для подготовки данных;</li><li>структурирование повторяющихся операций;</li><li>контроль качества итоговых данных.</li></ul><h4>Результат</h4><p>Подготовка отчётности ускорена в <b>2 раза</b>.</p></div><div class="dashboard"><div class="dash-top"><span class="dash-title">REPORTING / CONTROL PANEL</span><span class="dash-label">EXAMPLE MODEL</span></div><div class="dash"><div class="kpis"><div class="kpi"><strong>2×</strong><span>speed</span></div><div class="kpi"><strong>Excel</strong><span>core tool</span></div><div class="kpi"><strong>BI</strong><span>visual layer</span></div></div><div class="chart"><div class="barset"><i class="bar" style="height:82%"></i><i class="bar" style="height:72%"></i><i class="bar" style="height:65%"></i><i class="bar accent" style="height:42%"></i><i class="bar accent" style="height:34%"></i><i class="bar accent" style="height:28%"></i></div></div><div class="chart-caption"><span>8 ч</span><span>6 ч</span><span>5 ч</span><span>4 ч</span><span>3 ч</span><span>2 ч</span></div><div class="flow"><div>DATA</div><div>QUERY</div><div>REPORT</div><div>INSIGHT</div></div><div class="dash-note">ПРИМЕР РАСЧЁТА · трудозатраты на типовой отчёт: 8 → 4 ч.</div></div></div></div></div></article>
+
+<article class="case"><div class="case-head"><div class="case-no">02 / PROCUREMENT</div><div><h3>Аналитика закупок</h3><div class="lead">Поставщики → стоимость владения → решение</div></div><button class="toggle">+</button></div><div class="case-body"><div class="case-grid"><div class="copy"><h4>Задача</h4><p>Сравнить предложения поставщиков медицинского оборудования по цене, срокам, оплате и гарантиям.</p><h4>Решение</h4><ul><li>сравнение коммерческих предложений;</li><li>анализ динамики цен и структуры закупок;</li><li>расчёт итоговой стоимости с доставкой и обслуживанием;</li><li>обоснование выбора для руководства.</li></ul><h4>Результат</h4><p>Расходы на закупки снижены на <b>8–10%</b>.</p></div><div class="dashboard"><div class="dash-top"><span class="dash-title">PROCUREMENT / SUPPLIER VIEW</span><span class="dash-label">EXAMPLE MODEL</span></div><div class="dash"><div class="kpis"><div class="kpi"><strong>8–10%</strong><span>saving</span></div><div class="kpi"><strong>TCO</strong><span>cost model</span></div><div class="kpi"><strong>4×</strong><span>criteria</span></div></div><div class="chart"><div class="barset"><i class="bar" style="height:95%"></i><i class="bar" style="height:86%"></i><i class="bar" style="height:78%"></i><i class="bar accent" style="height:70%"></i></div></div><div class="chart-caption"><span>1,20 млн ₽</span><span>1,15 млн ₽</span><span>1,08 млн ₽</span><span>1,04 млн ₽</span></div><div class="flow"><div>PRICE</div><div>DELIVERY</div><div>TERMS</div><div>TCO</div></div><div class="dash-note">ПРИМЕР РАСЧЁТА · цена + доставка + сервис → итоговая стоимость закупки.</div></div></div></div></div></article>
+
+<article class="case"><div class="case-head"><div class="case-no">03 / DATA QUALITY</div><div><h3>Контроль качества данных</h3><div class="lead">Системы → сверка → надёжная отчётность</div></div><button class="toggle">+</button></div><div class="case-body"><div class="case-grid"><div class="copy"><h4>Задача</h4><p>Консолидировать данные из информационных систем и баз данных и сократить ошибки в отчётности.</p><h4>Решение</h4><ul><li>сверка реестров;</li><li>проверка расхождений;</li><li>контроль данных из разных источников;</li><li>применение нормативных требований при подготовке материалов.</li></ul><h4>Результат</h4><p>Количество ошибок в отчётности сокращено на <b>30%</b>.</p></div><div class="dashboard"><div class="dash-top"><span class="dash-title">DATA QUALITY / CONTROL</span><span class="dash-label">EXAMPLE MODEL</span></div><div class="dash"><div class="kpis"><div class="kpi"><strong>30%</strong><span>fewer errors</span></div><div class="kpi"><strong>QA</strong><span>reconciliation</span></div><div class="kpi"><strong>DATA</strong><span>multiple sources</span></div></div><div class="chart"><div class="barset"><i class="bar" style="height:100%"></i><i class="bar" style="height:84%"></i><i class="bar" style="height:68%"></i><i class="bar accent" style="height:70%"></i></div></div><div class="chart-caption"><span>20</span><span>17</span><span>14</span><span>14</span></div><div class="flow"><div>SOURCES</div><div>CHECK</div><div>RECON</div><div>REPORT</div></div><div class="dash-note">ПРИМЕР РАСЧЁТА · 20 ошибок → 14 после дополнительной сверки данных.</div></div></div></div></div></article>
+</div></section>
+
+<section id="experience"><div class="kicker" style="margin-bottom:18px;color:var(--gold)">03 / EXPERIENCE</div><div class="head"><h2>Experience</h2><p>Опыт в управленческой отчётности, финансовом и экономическом анализе, коммерческих закупках и работе с данными.</p></div><div class="timeline">
+<div class="job"><div class="date">03.2025 — PRESENT</div><h3>Департамент городского имущества города Москвы</h3><div class="role">Ведущий специалист</div><ul><li>Формировала регулярную управленческую отчётность для руководства: сводные показатели, аналитические записки, презентации, выводы и рекомендации.</li><li>Проводила план-факт анализ и анализ отклонений, выявляла причины расхождений и готовила корректирующие действия.</li><li>Автоматизировала типовые отчёты в Excel: сводные таблицы, Power Query, формулы.</li><li>Анализировала динамику доходов и расходов, денежные потоки и задолженность; готовила расчёты и обоснования.</li><li>Консолидировала и проверяла данные из информационных систем и баз данных, сверяла реестры — количество ошибок в отчётности снижено на 30%.</li><li>Оформляла первичные учётные документы в электронном виде и выстраивала порядок согласования — возвраты на доработку снижены на 25%.</li><li>Применяла нормативные правовые акты и внутренние регламенты при подготовке отчётности и обоснований расходов.</li><li>Собирала данные у смежных подразделений, контролировала исполнение поручений и сроки сдачи отчётности.</li></ul></div>
+<div class="job"><div class="date">11.2024 — 03.2025</div><h3>Паритет-центр</h3><div class="role">Менеджер-аналитик</div><ul><li>Проводила сравнительный анализ поставщиков медицинского оборудования по цене, срокам, условиям оплаты и гарантиям.</li><li>Анализировала динамику цен и структуру закупок, выявляла позиции с возможностью снижения затрат — расходы на закупки снижены на 8–10%.</li><li>Рассчитывала итоговую стоимость закупки с учётом доставки, условий оплаты и обслуживания.</li><li>Планировала закупки и контролировала сроки поставок.</li><li>Участвовала в согласовании договорных условий, отслеживала расчёты и задолженность по договорам.</li><li>Вела реестр поставщиков и готовила аналитические отчёты по закупкам для руководства.</li></ul></div>
+<div class="job"><div class="date">06.2024 — 08.2024</div><h3>ВНИИА им. Н. Л. Духова</h3><div class="role">Техник</div><ul><li>Собирала и анализировала данные для сводных материалов подразделения, готовила аналитические справки.</li><li>Проверяла оформление документов на соответствие внутренним регламентам и нормативным требованиям — возвраты на доработку сокращены почти в 2 раза.</li><li>Систематизировала технические и отчётные документы, выстраивала структуру хранения — время поиска материалов сокращено в 3 раза.</li><li>Вносила и актуализировала данные в таблицах и внутренних базах, сверяла их с первичными документами.</li><li>Составляла сводные таблицы и диаграммы в Excel.</li><li>Готовила краткие отчёты и справки и взаимодействовала со смежными подразделениями.</li></ul></div>
+<div class="job"><div class="date">06.2022 — 08.2022</div><h3>НИКИЭТ им. Н. А. Доллежаля</h3><div class="role">Финансовый аналитик · стажировка</div><ul><li>Рассчитывала себестоимость, рентабельность и отклонения план/факт по статьям затрат.</li><li>Собирала и группировала данные по статьям затрат и доходов, выделяла статьи с наибольшими отклонениями.</li><li>Сверяла первичные документы с отчётными формами.</li><li>Строила расчётные модели и отчётные таблицы в Excel — ручной труд команды сокращён примерно на 3 часа в неделю.</li><li>Актуализировала плановые таблицы и показатели подразделения.</li><li>Анализировала структуру затрат и предлагала варианты оптимизации.</li><li>Готовила справки и презентации с результатами анализа для руководителя отдела.</li></ul></div>
+</div></section>
+
+<section id="skills"><div class="kicker" style="margin-bottom:18px;color:var(--gold)">04 / TOOLKIT</div><div class="head"><h2>Toolkit</h2><p>Финансовая экспертиза, аналитика данных и визуализация.</p></div><div class="skills">
+<span class="skill">Excel</span><span class="skill">Power Query</span><span class="skill">Power BI</span><span class="skill">SQL · basic</span><span class="skill">PowerPoint</span><span class="skill">План-факт</span><span class="skill">Факторный анализ</span><span class="skill">Рентабельность</span><span class="skill">Себестоимость</span><span class="skill">Cash Flow</span><span class="skill">ABC-анализ</span><span class="skill">Break-even</span><span class="skill">РСБУ</span><span class="skill">Основы МСФО</span><span class="skill">Закупки</span><span class="skill">Договорная работа</span><span class="skill">Дебиторская задолженность</span><span class="skill">Кредиторская задолженность</span><span class="skill">Финансово-экономические обоснования</span><span class="skill">Налоговое и бюджетное законодательство</span><span class="skill">Презентации для руководства</span><span class="skill">Английский C1</span></div></section>
+
+<section><div class="head"><h2>Education</h2><p>Финансовая аналитика и экономика плюс профессиональная переподготовка.</p></div><div class="edu">
+<div class="edu-card"><div class="year">2026</div><h3>Магистр · Финансовая аналитика</h3><p>РЭУ им. Г. В. Плеханова, Высшая школа финансов</p></div>
+<div class="edu-card"><div class="year">2024</div><h3>Бакалавр · Экономика</h3><p>РЭУ им. Г. В. Плеханова, Высшая школа финансов</p></div>
+<div class="edu-card"><div class="year">2025—2026</div><h3>Предпринимательство и инновации</h3><p>Профессиональная переподготовка, 360 часов</p></div>
+<div class="edu-card"><div class="year">2023—2024</div><h3>Веб-ориентированные решения</h3><p>Профессиональная переподготовка · IT и веб-разработка</p></div>
+</div></section>
+
+<section class="contact" id="contact"><div class="contact-box"><div><div class="kicker" style="color:#315343">CONTACT</div><h2>Let's talk<br>about numbers.</h2><p>Рассматриваю позиции финансового аналитика и экономиста-финансиста. Открыта к задачам в сфере отчётности, планирования, анализа и работы с данными.</p></div><a class="email" href="mailto:katiy.starkova@yandex.ru">katiy.starkova@yandex.ru ↗</a></div></section>
+<div class="footer"><span>ЕКАТЕРИНА СТАРКОВА</span><span>ANALYTICS PORTFOLIO / 2026</span><span>FINANCIAL ANALYTICS · ECONOMICS</span></div>
+</div>
+<script>
+document.querySelectorAll('.case').forEach((card, index) => {
+  const button = card.querySelector('.toggle');
+  const body = card.querySelector('.case-body');
+  if (!button || !body) return;
+
+  const setState = (open) => {
+    card.classList.toggle('open', open);
+    button.textContent = open ? '−' : '+';
+    button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-label', open ? 'Свернуть кейс' : 'Раскрыть кейс');
+  };
+
+  button.setAttribute('type', 'button');
+  button.setAttribute('aria-expanded', 'false');
+  button.setAttribute('aria-label', 'Раскрыть кейс');
+  setState(false);
+
+  button.addEventListener('click', () => {
+    setState(!card.classList.contains('open'));
+  });
+});
+</script>
+</body></html>
